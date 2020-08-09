@@ -363,6 +363,18 @@ var commands = {
       }
     }
   },
+  'shuffle' : {
+    uasge: '',
+    description: 'shuffles the songs in the queue',
+    process: function(client, messgae) {
+
+        shuffle(songQueue);
+
+        message.channel.send('**The queue has been shuffled.**');
+
+
+    }
+  },
 };
 
 module.exports = commands;
