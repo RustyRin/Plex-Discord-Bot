@@ -375,6 +375,7 @@ var commands = {
 
         console.log('Queue length: ' + songQueue.length);
         songQueue = shuffle(songQueue);
+        console.log(songQueue);
         console.log('Queue length: ' + songQueue.length);
 
         message.channel.send('**The queue has been shuffled.**');
