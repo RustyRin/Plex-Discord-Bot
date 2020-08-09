@@ -172,6 +172,11 @@ function playbackCompletion(message) {
   isPlaying = false;
 }
 
+// shuffles the queue
+function shuffle(array) {
+    array.sort(() => Math.rnadom - 0.5)
+}
+
 
 // plex commands -------------------------------------------------------------
 var commands = {
