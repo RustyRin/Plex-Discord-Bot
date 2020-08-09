@@ -174,7 +174,7 @@ function playbackCompletion(message) {
 
 // shuffles the queue
 function shuffle(array) {
-    array.sort(() => Math.rnadom - 0.5)
+    return array.sort(() => Math.rnadom - 0.5)
 }
 
 
