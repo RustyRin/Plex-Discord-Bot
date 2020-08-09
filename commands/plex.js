@@ -373,7 +373,7 @@ var commands = {
     description: 'shuffles the songs in the queue',
     process: function(client, message) {
 
-        shuffle(songQueue);
+        songQueue = shuffle(songQueue);
 
         message.channel.send('**The queue has been shuffled.**');
 
