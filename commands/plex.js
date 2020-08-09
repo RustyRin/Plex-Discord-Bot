@@ -371,7 +371,7 @@ var commands = {
   'shuffle' : {
     uasge: '',
     description: 'shuffles the songs in the queue',
-    process: function(client, messgae) {
+    process: function(client, message) {
 
         shuffle(songQueue);
 
