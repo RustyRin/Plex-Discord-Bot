@@ -175,7 +175,6 @@ function playbackCompletion(message) {
 // shuffles the queue
 function shuffle(array) {
   firstSong = array[0];
-  console.log("Playing song is " + firstSong);
   array.shift();
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -390,14 +389,27 @@ var commands = {
     description: 'shuffles the songs in the queue',
     process: function(client, message) {
 
-        console.log('Queue length: ' + songQueue.length);
         songQueue = shuffle(songQueue);
-        console.log(songQueue);
-        console.log('Queue length: ' + songQueue.length);
 
-        message.channel.send('**The queue has been shuffled.**');
+        var messageLines = '';
 
+        if (songQueue.length > 0) {
+          for (var t = 0; t < songQueue.length; t++) {
+            messageLines += (t+1) + ' - ' + songQueue[t].artist + ' - ' + songQueue[t].title + '\n';
+          }
 
+          messageLines += '\n***!removesong (number)** to remove a song*';
+          messageLines += '\n***!skip** to skip the current song*';
+
+          var embedObj = {
+            embed: {
+              color: 2389639,
+              description: messageLines,
+            }
+          };
+
+          message.channel.send('\n**The new shuffled song Queue:**\n\n', embedObj);
+        }
     }
   },
 };
