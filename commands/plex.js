@@ -175,6 +175,7 @@ function playbackCompletion(message) {
 // shuffles the queue
 function shuffle(array) {
   firstSong = array[0];
+  console.log("Playing song is " + firstSong);
   array.shift();
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -190,8 +191,8 @@ function shuffle(array) {
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
-
-  return array.unshift(firstSong);
+  array.unshift(firstSong);
+  return array;
 }
 
 // plex commands -------------------------------------------------------------
