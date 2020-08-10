@@ -409,7 +409,7 @@ var commands = {
             }
           };
 
-          message.channel.send('\n**The new shuffled song Queue:**\n\n', embedObj);
+          message.channel.send('\n**The new shuffled song queue:**\n\n', embedObj);
         }
     }
   },
