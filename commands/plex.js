@@ -369,6 +369,7 @@ var commands = {
 
         messageLines += '\n***!removesong (number)** to remove a song*';
         messageLines += '\n***!skip** to skip the current song*';
+        messageLines += '\n***!shuffle** to shuffle the queue*'
 
         var embedObj = {
           embed: {
