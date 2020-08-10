@@ -53,6 +53,7 @@ If I am missing any steps, feel free to reach out or open  an issue/bug in the I
 * `!skip` : skips the current song if one is playing and plays the next song in queue if it exists
 * `!stop` : stops song if one is playing
 * `!viewqueue` : displays current song queue
+* '!shuffle' : Shuffles the song queue and then shows you the new queue
 
 ***
 ## Customization
