@@ -82,7 +82,6 @@ function findSong(query, offset, pageSize, message) {
     console.log('narp');
   });
 }
-'''
 // finds playlist with string, offset, pagesize and message
 //function findPLaylist(query, offset, pageSize, messgae) {
  //   plex.query('/search/?type=15&query=' + query + '&X-Plex-Container-Start=' + offset + '&X-Plex-Container-Size=' + pageSize).then(function(res) {
