@@ -86,7 +86,7 @@ function findSong(query, offset, pageSize, message) {
 // finds playlist with string, offset, pagesize and message
 function findPLaylist(query, offset, pageSize, messgae) {
     plex.query('/search/?type=15&query=' + query + '&X-Plex-Container-Start=' + offset + '&X-Plex-Container-Size=' + pageSize).then(function(res) {
-
+    }
     // if found only one playplaylist
         // add to q
             // do a for loop for where it justs uses the already existing addToQueue function with the info from the playlist
