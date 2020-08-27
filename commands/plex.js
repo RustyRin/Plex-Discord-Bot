@@ -83,6 +83,16 @@ function findSong(query, offset, pageSize, message) {
   });
 }
 
+// finds playlist with string, offset, pagesize and message
+function findPLaylist(query, offset, pageSize, messgae) {
+    plex.query('/search/?type=15&query=' + query + '&X-Plex-Container-Start=' + offset + '&X-Plex-Container-Size=' + pageSize).then(function(res) {
+
+    // if found only one playplaylist
+        // add to q
+            // do a for loop for where it justs uses the already existing addToQueue function with the info from the playlist
+    // otherwise, do messageLines += (t+1) + ' - ' + artist + ' - ' + tracks[t].title + '\n'; but for playlist names
+}
+
 // not sure if ill need this
 function addToQueue(songNumber, tracks, message) {
   if (songNumber > -1){
@@ -413,6 +423,21 @@ var commands = {
         }
     }
   },
+  'playplaylist' : {
+      usaage: '<playlist name>',
+      description: 'Adds the playl;ist to the song queue',
+      process: function(client, message, query) {
+
+          // if the playlist request exists
+          if (query.length > 0) {
+              plexOffset = 0;       // reset paging
+              plexQuery = null;     // reset query for !nextpage
+
+          }
+
+
+      }
+  }
 };
 
 module.exports = commands;
