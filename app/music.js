@@ -7,13 +7,15 @@ module.exports = function(client) {
     console.log('bot ready');
     console.log('logged in as: ' + client.user.tag);
 
+    client.user.setPresence({ game: { name: '!help for available songs https://rb.gy/eezefr' }, status: 'online' })
+
     plexCommands['plexTest'].process();
   });
 
   // when message is sent to discord
   client.on('message', function(message){
     var msg = message.content.toLowerCase();
-    if (msg.startsWith('!!')){
+    if (msg.startsWith('!')){
       var cmdTxt = msg.split(" ")[0].substring("-".length, msg.length);
       var query = msg.substring(msg.indexOf(' ')+1);
       var cmd = plexCommands[cmdTxt];
