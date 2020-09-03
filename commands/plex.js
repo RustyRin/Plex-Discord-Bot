@@ -79,7 +79,7 @@ function findSong(query, offset, pageSize, message) {
       message.reply('** I can\'t find a song with that title.**');
     }
   }, function (err) {
-    console.log('narp');
+    console.log('Error in findSong');
   });
 }
 // finds playlist with string, offset, pagesize and message
@@ -141,7 +141,7 @@ function playSong(message) {
           playbackCompletion(message);
         }
       });
-      dispatcher.setVolume(0.2);
+      dispatcher.setVolume(1.5);
     });
 
     // probbaly just change this to channel alert, not reply
