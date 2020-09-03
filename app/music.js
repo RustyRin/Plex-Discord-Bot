@@ -7,7 +7,7 @@ module.exports = function(client) {
     console.log('bot ready');
     console.log('logged in as: ' + client.user.tag);
 
-    client.user.setPresence({ game: { name: '!help for available songs https://rb.gy/eezefr' }, status: 'online' })
+    client.user.setPresence({ game: { name: '!help | for available songs https://rb.gy/eezefr' }, status: 'online' })
 
     plexCommands['plexTest'].process();
   });
