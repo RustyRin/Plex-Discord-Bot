@@ -119,6 +119,10 @@ function addToQueue(songNumber, tracks, message) {
     message.reply('**Stop trying to break me.**');
   }
 }
+// help command
+function help(message) {
+  message.reply('$play `SONG TITLE OR ARTIST` to have me search the server for music, if found, join your voice channel and play it.\nYou can use the can use the command again to add another song to the queue!')
+}
 
 // play song when provided with index number, track, and message
 function playSong(message) {
